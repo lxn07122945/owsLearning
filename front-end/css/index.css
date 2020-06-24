@@ -1,0 +1,21 @@
+html, body {
+    width: 100%;
+    height: 100%;
+}
+.kuai,.hangnei {
+    border: 1px salmon dashed;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 10px;
+    background-color:  #75c6d0;
+}
+table,
+td {
+    border: 1px solid #333;
+}
+
+thead,
+tfoot {
+    background-color: #333;
+    color: #fff;
+}

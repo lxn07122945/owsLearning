@@ -15,6 +15,131 @@
         <title>learnign list</title>
     </head>
     <body>
-        <p>ceshi</p>
+        <div class="kuai">
+            块级元素：<br>
+            1. 独占一行，每一个块级元素都会从新的一行重新开始，从上到下排布<br>
+            2. 可以直接控制宽度、高度以及盒子模型的相关css属性<br>
+            3. 在不设置宽度的情况下，块级元素的宽度是它父级元素内容的宽度<br>
+            4. 在不设置高度的情况下，块级元素的高度是它本身内容的高度<br>
+        </div>
+        <h1>三国演义</h1>
+
+        <p>罗贯中</p>
+
+        <h2>第一回 宴桃园豪杰三结义 斩黄巾英雄首立功</h2>
+
+        <p>话说天下大势，分久必合，合久必分。周末七国分争，并入于秦。及秦灭之后，楚、汉分争，又并入于汉……</p>
+
+        <h2>第二回 张翼德怒鞭督邮 何国舅谋诛宦竖</h2>
+
+        <p>且说董卓字仲颖，陇西临洮人也，官拜河东太守，自来骄傲。当日怠慢了玄德，张飞性发，便欲杀之……</p>
+
+        <h3>却说张飞</h3>
+        <p>却说张飞饮了数杯闷酒，乘马从馆驿前过，见五六十个老人，皆在门前痛哭。飞问其故，众老人答曰：“督邮逼勒县吏，欲害刘公；我等皆来苦告，不得放入，反遭把门人赶打！”……</p>
+        <h4>我是h4</h4>
+        <h5>我是h5</h5>
+        <h6>我是h6</h6>
+        <ul>
+            <li>
+                第一个ul-li
+            </li>
+            <li>
+                第二个ul-li
+            </li>
+            <li>
+                第三个ul-li
+            </li>
+        </ul>
+        <p>ul-li</p>
+        <ol>
+            <li>
+                第一个ul-li
+            </li>
+            <li>
+                第二个ul-li
+            </li>
+            <li>
+                第三个ul-li
+            </li>
+        </ol>
+        <p>dl-dt-dd使用:描述一些术语，用key-wd的形式来解释说明</p>
+        <dl>
+            <dt>Name</dt>    
+            <dd>Godzilla</dd>
+            <dt>Born</dt>
+            <dd>1952</dd>
+            <dt>Birthplace</dt>
+            <dd>Japan</dd>
+            <dt>Color</dt>
+            <dd>Green</dd>
+        </dl>
+        <p>form 表单</p>
+
+        <form action="" method="get" class="form-example">
+            <div class="form-example">
+              <label for="name">Enter your name: </label>
+              <input type="text" name="name" id="name" required>
+            </div>
+            <div class="form-example">
+              <label for="email">Enter your email: </label>
+              <input type="email" name="email" id="email" required>
+            </div>
+            <div class="form-example">
+              <input type="submit" value="Subscribe!">
+            </div>
+          </form>
+
+        <p>table 表格</p>
+        <table>
+            <thead>
+                <tr>
+                    <th colspan="2">The table header</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>The table body</td>
+                    <td>with two columns</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="hangnei">
+            行内元素（内联）<br>
+            1. 和其他内联元素从左到右在一行显示
+            2. 不能直接控制宽度、高度以及盒子模型的相关css属性，但是直接设置内外边距的左右值是可以的
+            3. 内联元素的宽高是由本身内容的大小决定（文字、图片等）
+            4. 内联元素只能容纳文本或者其他内联元素（此处请注意，不要在内联元素中嵌套块级元素）
+        </div>
+        <div>
+            <span>百度地图</span><b>JavaScript API GL v1.0</b><strong>是一套由JavaScript</strong>语言编写的<u>应用程序接口</u>，<a>可帮助您在</a><i>网站中</i><em>构建功能丰富</em>、<s>交互性强</s>的<strik>地图应用</strik>，<del>支持PC端和</del><u>移动端基于浏览器</u>的地图应用开发，且支持HTML5特性的地图开发。
+            百度地图JavaScript API支持HTTP和HTTPS，免费对外开放，可直接使用。接口使用无次数限制。在使用前，您需先申请密钥（ak）才可使用。在您使用百度地图JavaScript API之前，请先阅读百度地图API使用条款。任何非营利性应用请直接使用，商业应用请参考使用须知。
+            <big>JavaScript API GL</big><small>使用了WebGL对地图</small>、覆盖物等进行渲染，支持3D视角展示地图。 GL版本接口基本向下兼容，迁移成本低。目前v1.0版本支持了基本的3D地图展示、基本地图控件和覆盖物。
+        </div>
+        <p>
+            H<sub>2</sub>O
+            2<sup>5</sup> === 32
+            <select name="test" id="selet">
+                <option value="12">12</option>
+                <option value="13">13</option>
+                <option value="14">14</option>
+            </select>
+        </p>
+        <img src="../../basicImg/frontend.png" alt="we lose our picture">
+        <textarea id="testinput"></textarea>
+
+        <p> some special tags</p>
+
+        <canvas id="myCanvas" width="200" height="100" style="border:1px solid #000000;">
+            您的浏览器不支持 HTML5 canvas 标签。
+        </canvas>
+        <video width="320" height="240" controls>
+            <source src="https://mapopen-website-videos.cdn.bcebos.com/common/festival.mp4" type="video/mp4">
+          您的浏览器不支持Video标签。
+        </video>
+
+        <audio controls>
+            <source src="../source/12988.mp3" type="audio/mp3">
+        </audio>
     </body>
 </html>
