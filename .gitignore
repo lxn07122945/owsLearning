@@ -68,4 +68,6 @@ fastlane/screenshots/**/*.png
 fastlane/test_output
 
 
-front-end/.DS_Store
+# some localfile
+.DS_Store
+*/.DS_Store
