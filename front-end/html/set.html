@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+    <head>
+        <title>daily learning</title>
+    </head>
+    <body>
+    </body>
+    <script type="text/javascript">
+        let color = new Set(['liu', 'xiang', 'nan']);
+        color.add('jia').add('mu').add('ming').add('xiang');
+        console.log(color);
+        console.log(color.size);
+        color.delete('xiang');
+        console.log(color.has('xiang'));
+        color.forEach(item => {
+            console.log(item);
+        })
+        color.clear();
+        console.log(color);
+    </script>
+</html>
