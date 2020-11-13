@@ -71,3 +71,4 @@ fastlane/test_output
 # some localfile
 .DS_Store
 */.DS_Store
+node_modules/
