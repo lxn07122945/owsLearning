@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>daily learning</title>
+    </head>
+    <body>
+        <canvas id="example" style="width:500px;height: 500px">
+            please use a browser that support 'canvas'
+        </canvas>
+    </body>
+    <script type="text/javascript">
+        function main () {
+            let canvasScreen = document.getElementById('example');
+            if (!canvasScreen) {
+                alert('fail to get canvas');
+                retrun;
+            }
+            // 获取绘制二维图形的上下文
+            let ctx = canvasScreen.getContext('2d');
+            ctx.fillStyle = 'rgb(0, 0, 255, 0.6)';
+            ctx.fillRect(120, 10, 150, 150)
+        }
+        main();
+    </script>
+</html>

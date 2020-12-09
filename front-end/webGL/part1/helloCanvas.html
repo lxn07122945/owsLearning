@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>helloCanvas</title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gl-matrix/2.8.1/gl-matrix-min.js"
+        integrity="sha512-zhHQR0/H5SEBL3Wn6yYSaTTZej12z0hVZKOv3TwCUXT1z5qeqGcXJLLrbERYRScEDDpYIJhPC1fk31gqR783iQ=="
+        crossorigin="anonymous" defer>
+      </script>
+    </head>
+    <body>
+        <canvas id="example" style="width:500px;height: 500px">
+            please use a browser that support 'canvas'
+        </canvas>
+    </body>
+    <script type="text/javascript">
+        function main () {
+            let canvasScreen = document.getElementById('example');
+            let gl = canvasScreen.getContext("webgl");
+
+            if (!gl) {
+                alert('fail to get canvas');
+                retrun;
+            }
+            gl.clearColor(0, 0, 0, 1.0);
+            gl.clear(gl.COLOR_BUFFER_BIT)
+           
+        }
+        main();
+    </script>
+</html>

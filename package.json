@@ -1,0 +1,24 @@
+{
+  "name": "owslearning",
+  "version": "1.0.0",
+  "description": "something about my learning with front-end",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lxn07122945/owsLearning.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lxn07122945/owsLearning/issues"
+  },
+  "homepage": "https://github.com/lxn07122945/owsLearning#readme",
+  "devDependencies": {
+    "eslint": "^7.5.0",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-plugin-import": "^2.22.0"
+  }
+}

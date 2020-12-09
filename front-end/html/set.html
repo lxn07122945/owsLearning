@@ -17,5 +17,36 @@
         })
         color.clear();
         console.log(color);
+        console.log(Object.is(NaN, NaN));
+
+        // 判断是否相等
+        console.log(Object.is(+0, -0));
+
+        // map对象
+
+        let solor = new Map();
+        solor.set('red', true);
+        solor.set('blue', true);
+        solor.get('red');
+        solor.delete('red');
+        solor.has('red');
+        solor.forEach((value, key) => {
+            console.log(`value is : ${value} and key is :${key}`);
+        });
+        solor.clear();
+        console.log(solor.get('red'));
+
+
+  
+        function Fn () {
+        }
+        Fn.prototype.getName = function () {
+            return 'test';
+        }
+
+        let obj = {};
+        obj.__proto__ = Fn.prototype;
+        console.log(obj);
+        console.log(obj.getName());
     </script>
 </html>

@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+    <head>
+        <title>daily learning-Array</title>
+    </head>
+    <body>
+    </body>
+    <script type="text/javascript">
+    // 构造函数
+    function Foo(name, age){
+        this.name = name;
+        this.age = age;
+    }
+    var f = new Foo('zhangsan', 24);
+    // 构造函数的扩展
+    var a = {};   // new Object();
+    var a = [];   // new Array();
+    var a = function() {}; // new Function();
+
+    // 原型规则和示例
+    var s = new Object();
+       s.status = 0;
+       console.log(s);
+
+       console.log(s.__proto__);
+
+       function fun  () {
+
+       }
+       // __proto__隐式原型， prototype 显示原型
+       // 对象的隐式原型指向对象的显示原型
+       console.log(fun.prototype);
+       console.log(fun.__proto__);
+
+       //当试图得到对象的属性时，如果变量本身没有这个属性，会试图去隐式原型中寻找（及构造函数的显式原型中寻找）
+       f.printName = function () {
+           console.log(this.name);
+       };
+       Foo.prototype.alertName = function () {
+           alert(this.name);
+       }
+       console.log(f);
+
+       f.printName();
+       f.alertName(); // is not a function
+        
+       
+       // 判断属性是自身的还是原型链上的
+       var item;
+       for (item in f) {
+           if(f.hasOwnProperty(item)){
+               console.log(item);
+           }
+       }
+
+       // 什么是原型链
+       console.log(f.toString()); // 一直寻找__ptoto__，没有就去上一级的构造函数，直到找到Object
+
+       // 判断引用类型属于哪个构造函数
+
+
+       // 写一个原型链继承对例子
+
+       console.log(a);
+       var a = 100;
+       fn ('zhangsan')
+       function fn (name) {
+            // 声明
+            console.log(name);
+       }
+       var fns = function () {
+           // 表达式
+       }
+    </script>
+</html>

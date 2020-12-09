@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>helloPoint</title>
+      <script type="text/javascript" src="../libs/webgl-utils.js"></script>
+    </head>
+    <body>
+        <canvas id="example" style="width:500px;height: 500px">
+            please use a browser that support 'canvas'
+        </canvas>
+    </body>
+    <script type="text/javascript">
+        function main () {
+            let canvasScreen = document.getElementById('example');
+            let gl = canvasScreen.getContext("webgl");
+
+            if (!gl) {
+                alert('fail to get canvas');
+                retrun;
+            }
+            const vertexShaderSource = '' +
+            'void main() {' +
+            '  gl_PointSize = 20.0;' +
+            '  gl_Position = vec4(0.0, 0.0, 0.0, 0.0, 1.0);' +
+            '}'
+            
+            const fragShaderSource = '' + 
+            'void main() {' +
+            'gl_FragColor = vec4(1.0, 0.0, 0.0, 1.0);' +
+            '}'
+
+            var program = initShader(gl, vertexShaderSource, fragShaderSource);
+            gl.drawArrays(gl.POINTS,0 , 1)
+        }   
+        main();
+    </script>
+</html>
