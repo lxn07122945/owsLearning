@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+    <head>
+        <title>daily learning</title>
+    </head>
+    <body>
+    </body>
+    <script type="text/javascript">
+    /**
+     *区别：同步会阻塞后续执行，异步不影响后续执行
+     */
+    
+    // 同步
+    console.log(1);
+    alert(2);
+    console.log(3);
+    // 异步
+    // 使用场景： 定时器(setTimeout、setInterval)、ajax、图片加载、事件绑定
+    console.log(100);
+    setTimeout(function () {
+        console.log(200);
+    }, 1000);
+    console.log(300);
+    function ajaxAppendImg(src) {
+        // 图片加载
+        var img = document.createElement('img');
+        img.src = src;
+        img.onload = function () {
+            console.log('load end');
+        };
+        document.body.appendChild(img);
+
+        // 事件绑定
+        img.addEventListener('click', function () {
+
+            console.log('click img');
+        });
+    }
+    ajaxAppendImg('http://api.map.baidu.com/images/spotmkrs.png');
+    </script>
+</html>
