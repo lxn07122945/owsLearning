@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+    <head>
+        <title>daily learning</title>
+    </head>
+    <body>
+    </body>
+    <script type="text/javascript">
+    // 闭包使用
+    var a,i;
+    for (i = 0; i < 10; i++) {
+        (function (i) {a = document.createElement('a');
+            a.innerHTML = i + '<br/>';
+            a.addEventListener('click', function () {
+                alert(i);
+            });
+            document.body.appendChild(a);
+        })(i)
+    }
+
+    // 闭包 2
+    function isLoad (i) {
+        var _list = [];
+        return function (i) {
+            if (_list.indexOf(i) > -1) {
+                return true;
+            }
+            else {
+                _list.push(i);
+                return false;
+            }
+        }
+    }
+    var firstLoad = isLoad();
+    console.log(firstLoad(10));
+    console.log(firstLoad(20));
+    console.log(firstLoad(20));
+
+    </script>
+</html>
