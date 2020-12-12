@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+    <head>
+        <title>daily learning</title>
+        <meta content="" charset="utf-8">
+        <style>
+            html,body {
+                width: 100%;
+                height: 100%;
+            }
+            div {
+                width: 100px;
+                height:200px;
+                border: 1px solid #666;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <a href="www.baidu.com" id="p1">百度</a>
+            <a href="www.baidu.com" id="p2">百度2</a>
+        </div>
+        <div id="div2">
+            <a href="www.baidu.com" id="p3">百度3</a>
+            <a href="www.baidu.com" id="p4">百度5</a>
+        </div>
+    </body>
+    <script type="text/javascript">
+    // 事件绑定
+        function bindEvent (ele, type, fn) {
+            ele.addEventListener(type, fn);
+        }
+        var body = document.body;
+        bindEvent(document.getElementById('p3'), 'click', function(e){
+            e.preventDefault();
+            e.stopPropagation();
+
+            console.log(e);
+            console.log(234)
+        });
+        bindEvent(document.getElementById('div2'), 'click', function(e){
+            console.log(e);
+            console.log('冒泡')
+        })
+    </script>
+</html>
