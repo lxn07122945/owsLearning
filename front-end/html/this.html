@@ -36,5 +36,22 @@
     console.log(firstLoad(20));
     console.log(firstLoad(20));
 
+    // 作用域： 函数作用域内声明的变量当函数执行结束之后就会被放弃；且，函数内的修改不会修改全局作用域。
+    var atest = '123';
+    function aboutThis () {
+        var btest = 'btest';
+        var atest = 'atest'
+        console.log(atest);
+        console.log(btest);
+    }
+    aboutThis();
+    console.log(atest);
+
+    var as = '234';
+    var ac = {
+        name: 'liuxiangnan',
+        age: 23
+    };
+    console.log(as && ac);
     </script>
 </html>
