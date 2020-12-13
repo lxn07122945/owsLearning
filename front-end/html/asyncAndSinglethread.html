@@ -36,5 +36,19 @@
         });
     }
     ajaxAppendImg('http://api.map.baidu.com/images/spotmkrs.png');
+
+
+    // ajax实现 
+    function reuqest(url, type, paras, fn) {
+        var xhr = new XMLHttpRequest();
+        xhr.open(type, url, false);
+        xhr.onreadystatechange = function(res) {
+            if (xhr.readyState === 4) {
+                if (xhr.status === 200) {
+                    fn(xhr.responseText)
+                }
+            }
+        }
+    }
     </script>
 </html>
