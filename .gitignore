@@ -72,3 +72,5 @@ fastlane/test_output
 .DS_Store
 */.DS_Store
 node_modules/
+dist/
+package-lock.json

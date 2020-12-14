@@ -43,6 +43,11 @@
         var xhr = new XMLHttpRequest();
         xhr.open(type, url, false);
         xhr.onreadystatechange = function(res) {
+            // readyState === 0 还没有发送
+            // 1 
+            // 2
+            // 3
+            // 4 
             if (xhr.readyState === 4) {
                 if (xhr.status === 200) {
                     fn(xhr.responseText)
