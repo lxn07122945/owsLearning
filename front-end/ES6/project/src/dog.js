@@ -1,5 +1,8 @@
-export default class Dog {
-    construct () {
-        console.inf('this is dog');
+export class Dog {
+    constructor (name) {
+        this.name = name;
+    }
+    sayName () {
+        console.log(this.name);
     }
 }

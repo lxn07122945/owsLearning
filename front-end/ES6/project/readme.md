@@ -37,3 +37,24 @@
 
 8、使用webpack的服务器，动态更新修改
     npm install webpack serve --save-dev
+    异常处理：
+
+        Error: Cannot find module 'webpack-cli/bin/config-yargs'
+            at Function.Module._resolveFilename (internal/modules/cjs/loader.js:580:15)
+            at Function.Module._load (internal/modules/cjs/loader.js:506:25)
+            at Module.require (internal/modules/cjs/loader.js:636:17)
+            at require (internal/modules/cjs/helpers.js:20:18)
+
+        If you upgrade webpack to 5. *, and webpack cli to 4. *, an error will be reported:
+
+        Error: Cannot find module 'webpack-cli/bin/config-yargs'
+
+        Temporary solution: Back off webpack cli to version 3. * for example:
+
+        "webpack-cli": "^ 3.3.12"
+
+    　　解决：
+
+        卸载当前的 webpack-cli npm uninstall webpack-cli
+
+        安装 webpack-cli 3.* 版本 npm install webpack-cli@3 -D
