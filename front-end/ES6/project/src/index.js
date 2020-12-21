@@ -5,7 +5,8 @@ import icon from './images/con.ico';
 // require('./class');
 // require('./jiegou');
 // require('./string&regx');
-require('./function');
+// require('./function');
+require('./obj&arr');
 require('./css/main.css');
 
 class Main {
