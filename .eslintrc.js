@@ -7,7 +7,8 @@ module.exports = {
         jest: true,
         jasmine: true,
         node: true,
-        commonjs: true
+        commonjs: true,
+        es5: true
     },
     parserOptions: {
         ecmaVersion: 11,

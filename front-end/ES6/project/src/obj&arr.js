@@ -94,3 +94,8 @@ console.log(arr3[1]); // undefined
 let  arr4 = Array.of(3);
 console.log(arr4);
 
+//Array.from();
+
+// find \findeIndex
+
+ 
