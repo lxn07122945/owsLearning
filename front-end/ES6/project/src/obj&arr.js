@@ -94,8 +94,11 @@ console.log(arr3[1]); // undefined
 let  arr4 = Array.of(3);
 console.log(arr4);
 
+<<<<<<< HEAD
 //Array.from();
 
 // find \findeIndex
 
  
+=======
+>>>>>>> 5b9809c5d1b51f3497d5ecde814ca4ba229fecfd
