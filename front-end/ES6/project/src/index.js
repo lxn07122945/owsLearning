@@ -6,9 +6,9 @@ import icon from './images/con.ico';
 // require('./jiegou');
 // require('./string&regx');
 // require('./function');
-require('./obj&arr');
+// require('./obj&arr');
 require('./css/main.css');
-
+require('./promis&ajax');
 class Main {
     constructor () {
         // document.write('<span>hi, this is a test for es6!</span>');

@@ -94,11 +94,20 @@ console.log(arr3[1]); // undefined
 let  arr4 = Array.of(3);
 console.log(arr4);
 
-<<<<<<< HEAD
 //Array.from();
 
 // find \findeIndex
+let arrFind = [2, 34,36,44,25];
+console.log(arrFind.find(n => n > 40));
+console.log(arrFind.findIndex(n => n > 40));
 
- 
-=======
->>>>>>> 5b9809c5d1b51f3497d5ecde814ca4ba229fecfd
+// fill()
+
+
+// copyWithin()
+let numbers = [1, 2, 3, 4];
+// 从索引 2 的位置开始粘贴
+// 从数组索引 0 的位置开始复制数据
+// 在遇到索引 1 时停止复制
+numbers.copyWithin(2, 0, 1);
+console.log(numbers.toString());

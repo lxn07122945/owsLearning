@@ -6,8 +6,8 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
     entry: path.resolve(__dirname, './src/index.js'),
     output: {
-        path: root,
-        filename: 'main.js'
+        path: path.join(__dirname, "/dist"),
+        filename: './main.js'
     },
     module: {
         rules: [
@@ -54,6 +54,8 @@ module.exports = {
     plugins: [
         new HtmlWebpackPlugin({
             chunksSortMode: 'none'
+            // filename: './index.html',
+            // template: './index.html'
         })
     ]
 };
