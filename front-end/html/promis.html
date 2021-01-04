@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+    <head>
+        <title>daily learning-Promise</title>
+        <link rel="stylesheet" href="../css/index.css">
+        <script type="text/javascript" src="../lib/Promise.js"></script>
+    </head>
+    <body>
+    </body>
+    <script type="text/javascript">
+        // const p = new Promise((resolve, reject) => {
+        //     setTimeout(() => {
+        //         resolve(1);
+        //     }, 100);
+        // }); 
+        // p.then(value => {
+        //     console.log('then 1');
+        // }, reason => {
+        //     console.log('reason 1');
+        // });
+        // p.then(value => {
+        //     console.log('then 2');
+        // }, reason => {
+        //     console.log('reason 2');
+        // });
+        // const pr = Promise.reject(2);
+        // console.log(pr);
+
+        const p2 = Promise.resolve(2);
+        const p2s = Promise.resolve(Promise.resolve(3));
+
+        const p3 = Promise.resolve(Promise.reject(3));
+        const p4 = Promise.reject(5);
+            // p2.then(value => {console.log('p2', value)});
+            // p2s.then(value => {console.log('p2s', value)});
+            // p3.then(value => {console.log('p3', value)});
+            // p4.catch(reason => {console.log('p4', reason);});
+        const pAll = Promise.all([p2, p2s, p3]);
+        pAll.then(value => {console.log(value);})
+    </script>
+</html>
