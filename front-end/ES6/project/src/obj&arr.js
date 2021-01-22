@@ -111,3 +111,29 @@ let numbers = [1, 2, 3, 4];
 // 在遇到索引 1 时停止复制
 numbers.copyWithin(2, 0, 1);
 console.log(numbers.toString());
+
+
+console.log('Array.prototype.reduce()');
+
+// 计算数组中每一项的和
+const reduce = (acc, currentValue, index) => {
+    console.log(index)
+    return acc + currentValue;
+};
+const reduceArr = [2, 4, 5, 6, 8];
+console.log(reduceArr.reduce(reduce, 25));
+
+// 累加对象数组中的值
+var initialValue = 0;
+var sum = [{x: 1}, {x:2}, {x:3}].reduce(function (accumulator, currentValue) {
+    return accumulator + currentValue.x;
+}, initialValue)
+
+console.log(sum) // logs 6
+
+// 二维数组扁平化
+var newarr = [[3,4], [2,1], [5,6]].reduce(function (a, b) {
+    return a.concat(b);
+}, [])
+
+console.log(newarr);

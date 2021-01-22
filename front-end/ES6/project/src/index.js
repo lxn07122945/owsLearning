@@ -8,7 +8,9 @@ import icon from './images/con.ico';
 // require('./function');
 // require('./obj&arr');
 require('./css/main.css');
-require('./promis&ajax');
+// require('./promis&ajax');
+// require('./redux');
+require ('./reg');
 class Main {
     constructor () {
         // document.write('<span>hi, this is a test for es6!</span>');

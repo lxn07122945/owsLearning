@@ -112,7 +112,6 @@ async function fn3 () {
     catch (err) {
         const fn = err;
         console.log(fn);
-
     }
 }
 

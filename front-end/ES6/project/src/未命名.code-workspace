@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": "../../../../../../mydemo/antd-demo"
+		},
+		{
+			"path": ".."
+		},
+		{
+			"path": "../../../../../myBlog"
+		}
+	],
+	"settings": {}
+}

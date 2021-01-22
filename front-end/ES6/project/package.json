@@ -22,5 +22,8 @@
     "webpack": "^5.10.2",
     "webpack-cli": "^3.3.12",
     "webpack-dev-server": "^3.11.0"
+  },
+  "dependencies": {
+    "bmap-test": "^1.0.0"
   }
 }
