@@ -1,13 +1,142 @@
 <!doctype html>
 <html>
-    <head>
-        <title>daily learning-Array</title>
-    </head>
-    <body>
-    </body>
-    <script type="text/javascript">
-        var arr1 = [1,32,23,45,45];
-        var arr2 = [8,43,22,31];
-        console.log(arr1.sort());
-    </script>
+
+<head>
+    <title>daily learning-Array</title>
+</script>
+</head>
+
+<body>
+</body>
+<scriptasync=""src="https://dlswbr.baidu.com/heicha/mw/abclite-2059-s.js">
+
+<script type="text/javascript">
+    // var arr1 = [1, 32, 23, 45, 45];
+    // var arr2 = [8, 43, 22, 31];
+    // console.log(arr1.sort());
+
+    // concat
+
+    // join
+
+    // push、pop
+
+    // shift、unshift
+
+    // slice
+
+    // splice
+
+    // sort
+
+    // reverse
+
+    // indexOf 、lastIndexOf
+
+    // forEach
+
+    // map
+    // var arr = [1, 2, 3, 4, 5];
+    // var arr2 = arr.map(function (item) {
+    //     return item * item;
+    // });
+    // console.log(arr2);  //[1, 4, 9, 16, 25]
+
+    // // filter
+    // var arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+    // var arr2 = arr.filter(function (x, index) {
+    //     return index % 3 === 0 || x >= 8;
+    // });
+    // console.log(arr2);  //[1, 4, 7, 8, 9, 10]
+    // // fill
+    // let arr = [1, 2, 3, 'arr', 5];
+
+    // arr.fill(1, 2);
+    // console.log(arr);//[1,2,1,1,1]
+
+    // arr.fill(0, 1, 3);
+    // console.log(arr); //[1,0,0,1,1];
+
+    // // every
+    // var arr = [1, 2, 3, 4, 5];
+    // var arr2 = arr.every(function (x) {
+    //     return x < 10;
+    // });
+    // console.log(arr2);  //true
+    // var arr3 = arr.every(function (x) {
+    //     return x < 3;
+    // });
+    // console.log(arr3);  // false
+
+    // // some
+    // var arr = [1, 2, 3, 4, 5];
+    // var arr2 = arr.some(function (x) {
+    //     return x < 3;
+    // });
+    // console.log(arr2);  //true
+    // var arr3 = arr.some(function (x) {
+    //     return x < 1;
+    // });
+    // console.log(arr3);  // false
+
+    // // includes：包含某个值
+
+    // // reduce 、reduceRight：遍历数组，从左、从右开始
+
+    // //toLocalString、toString
+    // const array1 = [22, 3, 31, 12];
+    // const str = array1.toLocaleString();
+    // const str1 = array1.toString();
+
+    // console.log(str); // 22,3,31,12
+    // console.log(str1); // 22,3,31,12
+    // // find、findIndex
+    // let arr = [1, 2, 3, 'arr', 5, 1, 9];
+
+    // console.log(arr.find((value, keys, arr) => {
+    //     return value > 2;
+    // })); // 3 返回匹配的值
+
+    // console.log(arr.findIndex((value, keys, arr) => {
+    //     return value > 2;
+    // })); // 2 返回匹配位置的索引
+    // //copyWithin
+
+    // flat、flatMap
+    const arr1 = [0, 1, 2, [3, 4]];
+
+    console.log(arr1.flat());
+    // expected output: [0, 1, 2, 3, 4]
+
+    const arr2 = [0, 1, 2, [[[3, 4]]]];
+
+    console.log(arr2.flat(2));
+    // expected output: [0, 1, 2, [3, 4]]
+
+    //使用 Infinity，可展开任意深度的嵌套数组
+    var arr4 = [1, 2, [3, 4, [5, 6, [7, 8, [9, 10]]]]];
+    console.log(arr4.flat(Infinity));
+    // [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+    // 扁平化数组空项,如果原数组有空位，flat()方法会跳过空位
+    var arr4 = [1, 2, , 4, 5];
+    arr4.flat();
+    // [1, 2, 4, 5]
+
+
+    // 相当于 [[2, 4], [3, 6], [4, 8]].flat()
+    [2, 3, 4].flatMap((x) => [x, x * 2])
+    // [2, 4, 3, 6, 4, 8]
+
+
+    //entries 、 key 、values
+    function runAsync (x) {
+    const p = new Promise(r => setTimeout(() => r(x, console.log(x)), 1000))
+    return p
+}
+Promise.all([runAsync(1), runAsync(2), runAsync(3)])
+  .then(res => console.log(res))
+
+</script>
+
 </html>
