@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>实现one two three four….nine <br>
+        add subtra multi  divide加减乘除方法 <br>
+        one(add(two()))——输出3<br>
+        three(multi(nine()))——输出27<br></div>
+</body>
+<script>
+    function common(res,state) {
+        const _res = res || [];
+        _res.push(state);
+        if (_res.length === 3){
+            if(_res[1]==="+"){
+                return _res[0] + _res[2];
+            }
+        }
+        return _res;
+    }
+
+    function one(res){
+        const _state = 1;
+        return common(res,_state);
+    }
+
+    function two(res){
+        const _state = 2;
+        return common(res,_state);
+    }
+
+    function add(res) {
+        const _state ='+';
+        return common(res,_state);
+    }
+
+    one(add(two()));
+    console.log(two(add(one())));
+
+    console.log(one(add(two())));
+</script>
+</html>

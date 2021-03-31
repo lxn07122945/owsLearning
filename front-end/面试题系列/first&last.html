@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>数组中找到一个元素第一次和最后一次出现的索引</h1>
+</body>
+<script type="text/javascript">
+   
+    //  数组中找到一个元素第一次和最后一次出现的索引
+    let arr = [3,3,2,4,5,6,7,3,4,3,56]
+
+    //  1、考查数组API的使用
+    console.log(arr.indexOf(4));
+    console.log(arr.lastIndexOf(4));
+
+    // 考查算法
+    // 暴力破解： 时间复杂度为O(n)
+    function firstInde(arr, target) {
+        let index = 0;
+        for (let i = 0; i < arr.length -1; i++) {
+            if (arr[i] === target) {
+                return i;
+            }
+        }
+        return -1;
+    }
+    function lastInde(arr, target) {
+        let index = 0;
+        for (let i = arr.length - 1; i >  0; i--) {
+            if (arr[i] === target) {
+                return i;
+            }
+        }
+        return -1;
+    }
+
+    let arr = [1,2,2,3,4,4,4,4,5,5]
+    // 二分法： 时间复杂度为O(log(n)); 要求是有序数列
+    function findFirstIndex (arr, target) {
+        let l = 0;
+        let r = arr.legnth - 1;
+        while (l <= r) {
+            let mid = Math.floor((l + r)/2)
+            let val = arr[mid];
+            if (target === val && ((mid - 1 < 0 || arr[mid - 1] < val))) {
+                return mid;
+            }
+
+            if (val <= target) {
+                r = mid - 1;
+            }
+            if (val > target) {
+                l = mid  + 1;
+            }
+        }
+        return -1;
+    }
+</script>
+</html>
